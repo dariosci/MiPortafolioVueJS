@@ -32,6 +32,7 @@ interesesList.value = ([
   justify-content: center;
   padding: 2rem;
   margin-top: 32px;
+  margin-bottom: 32px;
   min-height: 600px;
   overflow: hidden; /* Evita desbordes */
   border-radius: 10px;
