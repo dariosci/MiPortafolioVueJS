@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import Typed from 'typed.js';
+const iconos = import.meta.glob('../assets/icons/*', { eager: true, import: 'default', query: '?url' });
 
 onMounted(() => {
   new Typed('#typedMessage', {
@@ -23,12 +24,12 @@ const descripcion = 'Estudiante de la Tecnicatura Universitaria en Programación
 const residencia = 'Tupungato, Mendoza, Argentina';
 const presentacion = 'Bienvenido a mi portafolio personal, donde encontrarás mis proyectos y todos mis datos.';
 const redesSociales = [
-  {id: 1, name: 'instagram', src: '/src/assets/icons/instagram.svg', url: 'https://www.instagram.com/darioscili/'},
-  {id: 2, name: 'facebook', src: '/src/assets/icons/facebook.svg', url: 'https://www.facebook.com/darioscili/'},
-  {id: 3, name: 'whatsapp', src: '/src/assets/icons/whatsapp.svg', url: 'https://wa.me/542622660229/'},
-  {id: 4, name: 'twitter', src: '/src/assets/icons/twitter.svg', url: 'https://x.com/darosc'},
-  {id: 5, name: 'linkedin', src: '/src/assets/icons/linkedin.svg', url: 'https://www.linkedin.com/in/dario-scilipoti-279121254/'},
-  {id: 6, name: 'github', src: '/src/assets/icons/github.svg', url: 'https://github.com/dariosci/'},
+  {id: 1, name: 'instagram', src: iconos['/src/assets/icons/instagram.svg'], url: 'https://www.instagram.com/darioscili/'},
+  {id: 2, name: 'facebook', src: iconos['/src/assets/icons/facebook.svg'], url: 'https://www.facebook.com/darioscili/'},
+  {id: 3, name: 'whatsapp', src: iconos['/src/assets/icons/whatsapp.svg'], url: 'https://wa.me/542622660229/'},
+  {id: 4, name: 'twitter', src: iconos['/src/assets/icons/twitter.svg'], url: 'https://x.com/darosc'},
+  {id: 5, name: 'linkedin', src: iconos['/src/assets/icons/linkedin.svg'], url: 'https://www.linkedin.com/in/dario-scilipoti-279121254/'},
+  {id: 6, name: 'github', src: iconos['/src/assets/icons/github.svg'], url: 'https://github.com/dariosci/'},
 ];
 const telefono = '+54 9 2622-660229';
 </script>
