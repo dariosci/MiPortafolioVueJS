@@ -1,62 +1,3 @@
-<template>
-  <section id="estudios" class="py-16 bg-gray-50">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
-      Estudios
-    </h2>
-
-    <div class="relative max-w-6xl mx-auto px-10">
-      <!-- Línea central -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-300 to-cyan-400"></div>
-
-      <!-- Ítems -->
-      <div
-        v-for="(item, index) in estudios"
-        :key="item.id"
-        class="relative flex flex-col md:flex-row items-center mb-2 opacity-0 translate-y-10 transition-all duration-700 ease-out"
-        :class="[
-          index % 2 === 0 ? 'md:flex-row-reverse' : '',
-          visibleItems.has(index) ? 'opacity-100 translate-y-0' : ''
-        ]"
-        ref="timelineRefs"
-      >
-        <!-- Contenido -->
-        <div
-          class="bg-white shadow-xl rounded-2xl p-6 w-full md:w-[42%] z-10 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-          :class="index % 2 === 0 ? 'md:ml-16' : 'md:mr-16'"
-        >
-          <h3 class="text-xl font-semibold mb-1" :style="{ color: item.color }">
-            {{ item.titulo }}
-          </h3>
-          <p class="text-gray-600 font-medium">{{ item.institucion }}</p>
-          <p class="text-sm text-gray-400 mt-2">
-            Total horas: {{ item.totalHoras }}
-          </p>
-        </div>
-
-        <!-- Punto central -->
-        <div
-          class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-md flex items-center justify-center"
-          :style="{ backgroundColor: item.color }"
-        >
-
-        </div>
-
-        <!-- Fecha -->
-        <div
-          class="w-full md:w-[42%] mt-6 md:mt-0 text-center px-4"
-          :class="index % 2 === 0 ? 'md:text-right md:pr-10' : 'md:text-left md:pl-10'"
-        >
-          <span
-            class="font-bold text-lg tracking-wide"
-            :style="{ color: item.color }"
-          >{{ item.fecha }}</span>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
-
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
@@ -101,133 +42,230 @@ onMounted(() => {
 });
 </script>
 
+<template>
+  <section id="estudios" class="py-16 bg-gray-50">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+      Estudios
+    </h2>
+
+    <div class="relative max-w-6xl mx-auto px-10">
+      <!-- Línea central -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-300 to-cyan-400">
+      </div>
+
+      <!-- Ítems -->
+      <div v-for="(item, index) in estudios" :key="item.id"
+        class="relative flex flex-col md:flex-row items-center mb-2 opacity-0 translate-y-10 transition-all duration-700 ease-out"
+        :class="[
+          index % 2 === 0 ? 'md:flex-row-reverse' : '',
+          visibleItems.has(index) ? 'opacity-100 translate-y-0' : ''
+        ]" ref="timelineRefs">
+        <!-- 📱 Fecha arriba solo en móvil -->
+        <div class="block md:hidden mb-4 text-center">
+          <span class="fecha font-bold text-lg tracking-wide" :style="{ backgroundColor: item.color }">
+            {{ item.fecha }}
+          </span>
+        </div>
+        <!-- Contenido -->
+        <div
+          class="bg-white shadow-xl rounded-2xl p-6 w-full md:w-[42%] z-10 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          :class="index % 2 === 0 ? 'md:ml-16' : 'md:mr-16'">
+          <h3 class="text-xl font-semibold mb-1" :style="{ color: item.color }">
+            {{ item.titulo }}
+          </h3>
+          <p class="text-gray-600 font-medium">{{ item.institucion }}</p>
+          <p class="text-sm text-gray-400 mt-2">
+            Total horas: {{ item.totalHoras }}
+          </p>
+        </div>
+
+        <!-- Punto central (solo en escritorio) -->
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-md flex items-center justify-center hidden md:flex"
+          :style="{ backgroundColor: item.color }"></div>
+
+        <!-- Fecha normal en escritorio -->
+        <div class="hidden md:block text-center mb-2"
+          :class="index % 2 === 0 ? 'md:text-right md:pr-10' : 'md:text-left md:pl-10'">
+          <span class="font-bold text-lg tracking-wide" :style="{ color: item.color }">
+            {{ item.fecha }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
 <style scoped>
 .estudios {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .container-estudios {
-    display: flex;
-    width: 100%;
-    line-height: 2.5rem;
-    font-size: large;
+  display: flex;
+  width: 100%;
+  line-height: 2.5rem;
+  font-size: large;
 }
+
 section {
   animation: fadeIn 0.6s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bg-gray-50 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1));
 }
 
 .text-gray-800 {
-    --tw-text-opacity: 1;
-    color: #FFFFFF;
+  --tw-text-opacity: 1;
+  color: #FFFFFF;
 }
 
 .py-16 {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 
 /* Moviles (Pantallas pequeñas, hasta 767px) */
 @media (max-width: 767px) {
 
-    /* Agregando el responsivo para la seccion estudios */
-    .container-estudios {
-        width: 100%;
-        margin: 0rem;
-    }
+  /* Línea central más corta: empieza en el primer punto */
+  #estudios .relative>.absolute.bg-gradient-to-b {
+    top: 40px;
+    /* ajusta según la distancia del primer punto */
+    height: calc(100% - 40px);
+  }
 
-    .estudios {
-        width: 100%;
-        margin-top: 1rem;
-        font-size: small;
-    }
+  /* Achicar un poco las tarjetas */
+  #estudios .bg-white {
+    transform: scale(0.9);
+    margin: 0 auto 1rem auto;
+  }
 
-    .img-estudios {
-        width: 25%;
-        height: auto;
-        border-radius: 0.5rem;
-    }
+  /* Alinear el año arriba de la tarjeta */
+  #estudios .font-bold.text-lg {
+    margin-bottom: 0.5rem;
+  }
 
-    .detalle-estudios {
-        color: var(--black2);
-        font-size: 15px;
-        line-height: 32px;
-        margin-bottom: auto;
-    }
+  /* Agregando el responsivo para la seccion estudios */
+  .container-estudios {
+    width: 100%;
+    margin: 0rem;
+  }
 
-    .link-icono {
-        font-size: 1em;
-    }
+  .estudios {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: small;
+  }
 
-    th {
-        font-size: large;
-    }
+  .img-estudios {
+    width: 25%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
 
-    td {
-        font-size: small;
-    }
+  .detalle-estudios {
+    color: var(--black2);
+    font-size: 15px;
+    line-height: 32px;
+    margin-bottom: auto;
+  }
 
-    .instituto-class {
-        font-style: italic;
-    }
+  .link-icono {
+    font-size: 1em;
+  }
+
+  .instituto-class {
+    font-style: italic;
+  }
+
+  .timeline-line {
+    top: 80px;
+    /* empieza un poco más abajo, desde la primera fecha */
+    bottom: 0;
+  }
+
+  .fecha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .fecha:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* Tablets (Pantallas medianas, entre 768px y 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    /* Agregando el responsivo para seccion estudios */
-    .estudios {
-        width: 100%;
-    }
+  /* Agregando el responsivo para seccion estudios */
+  .estudios {
+    width: 100%;
+  }
 
-    #tabla-cursos th:nth-child(2),
-    #tabla-cursos th:nth-child(3),
-    #tabla-cursos td:nth-child(2),
-    #tabla-cursos td:nth-child(3) {
-        font-size: medium;
-    }
+  #tabla-cursos th:nth-child(2),
+  #tabla-cursos th:nth-child(3),
+  #tabla-cursos td:nth-child(2),
+  #tabla-cursos td:nth-child(3) {
+    font-size: medium;
+  }
 
-    td {
-        font-size: medium;
-    }
+  td {
+    font-size: medium;
+  }
 
-    th {
-        font-size: large;
-    }
+  th {
+    font-size: large;
+  }
 }
 
 /* Escritorio (Pantallas anchas, a partir de 1024px) */
 @media (min-width: 1024px) {
 
-    /* Agregando el responsivo para seccion estudios */
-    .estudios {
-        width: 100%;
-    }
+  /* Agregando el responsivo para seccion estudios */
+  .estudios {
+    width: 100%;
+  }
 
-    .container-estudios-section {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 2rem;
-    }
+  .container-estudios-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
 
-    th {
-        font-size: large;
-    }
+  th {
+    font-size: large;
+  }
 
-    td {
-        font-size: large;
-    }
+  td {
+    font-size: large;
+  }
 }
 </style>

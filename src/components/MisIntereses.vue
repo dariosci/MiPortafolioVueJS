@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import MisPruebas from './MisPruebas.vue';
+import FondoDinamico from './FondoDinamico.vue';
 
 const interesesList = ref([]);
 interesesList.value = ([
@@ -12,7 +12,7 @@ interesesList.value = ([
 
 <template>
   <div class="intereses">
-  <MisPruebas /> <!-- Efecto de fondo -->
+  <FondoDinamico /> <!-- Efecto de fondo -->
   <div class="contenido">
     <ul>
       <li class="item" v-for="interes in interesesList" :key="interes">
@@ -51,5 +51,6 @@ interesesList.value = ([
   margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.6;
+  text-align: center;
 }
 </style>

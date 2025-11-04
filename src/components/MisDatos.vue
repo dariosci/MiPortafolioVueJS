@@ -73,6 +73,7 @@ const telefono = '+54 9 2622-660229';
 
 <style scoped>
 .sobremi {
+  padding-top: 80px; /* Ajusta según altura de tu navbar */
   display: flex;
   justify-content: center;
   /* esto centra el elemento */

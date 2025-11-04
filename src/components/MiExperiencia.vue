@@ -5,14 +5,16 @@ const logos = import.meta.glob('../assets/images/*', { eager: true, import: 'def
 
 const experiencia = ref([]);
 experiencia.value = [
-  { id: 0,
+  {
+    id: 0,
     logo: logos['../assets/images/logo-hosp-392x84.png'],
     nombre: 'Hospital Grl. Las Heras - Tupungato',
     periodo: 'Marzo 2018-Presente',
     cargo: 'Servicio de Computos: Analista Mayor',
     url: 'https://hosplasheras.mendoza.gov.ar/'
   },
-  { id: 0,
+  {
+    id: 0,
     logo: logos['../assets/images/SciliTec-Logo-chico.png'],
     nombre: 'Scilitec',
     periodo: 'Abril 2017-Presente',
@@ -26,20 +28,16 @@ experiencia.value = [
   <section id="experiencia" class="experiencia">
     <div class="container">
 
-        <div class="categoria_icono">
-          <!--<i class="fa-solid fa-city"></i>-->
-          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Experiencia Laboral</h2>
-        </div>
+      <div class="categoria_icono">
+        <!--<i class="fa-solid fa-city"></i>-->
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Experiencia Laboral</h2>
+      </div>
 
       <article class="container-experiencia" id="container-experiencia">
-        <div
-          class="tarjeta-experiencia"
-          v-for="item in experiencia"
-          :key="item.id"
-        >
+        <div class="tarjeta-experiencia" v-for="item in experiencia" :key="item.id">
           <div class="experiencia-logo">
             <a :href="item.url" target="_blank">
-              <img :src=item.logo :alt="item.nombre" srcset=""/>
+              <img :src=item.logo :alt="item.nombre" srcset="" />
             </a>
           </div>
           <div class="experiencia-contenido">
