@@ -17,33 +17,33 @@ langSkillsList.value = [
 ];
 
 frameSkillsList.value = [
-  { id: 1, icono: '/src/assets/icons/vuejs.svg', nombre: 'Vue.js', nivel: 4 },
-  { id: 2, icono: '/src/assets/icons/nodejs.svg', nombre: 'Node.js', nivel: 4 },
-  { id: 3, icono: '/src/assets/icons/bootstrap.svg', nombre: 'Bootstrap', nivel: 3 },
-  { id: 4, icono: '/src/assets/icons/react.svg', nombre: 'React.js', nivel: 5 },
-  { id: 5, icono: '/src/assets/icons/django.svg', nombre: 'Django', nivel: 4 },
-  { id: 6, icono: '/src/assets/icons/flutter.svg', nombre: 'Flutter', nivel: 4 },
+  { id: 1, icono: iconos['/src/assets/icons/vuejs.svg'], nombre: 'Vue.js', nivel: 4 },
+  { id: 2, icono: iconos['/src/assets/icons/nodejs.svg'], nombre: 'Node.js', nivel: 4 },
+  { id: 3, icono: iconos['/src/assets/icons/bootstrap.svg'], nombre: 'Bootstrap', nivel: 3 },
+  { id: 4, icono: iconos['/src/assets/icons/react.svg'], nombre: 'React.js', nivel: 5 },
+  { id: 5, icono: iconos['/src/assets/icons/django.svg'], nombre: 'Django', nivel: 4 },
+  { id: 6, icono: iconos['/src/assets/icons/flutter.svg'], nombre: 'Flutter', nivel: 4 },
 ];
 
 softSkillsList.value = [
-  { id: 1, icono: '/src/assets/icons/git.svg', nombre: 'Git', nivel: 4 },
-  { id: 2, icono: '/src/assets/icons/docker.svg', nombre: 'Docker', nivel: 5 },
-  { id: 3, icono: '/src/assets/icons/vscode.svg', nombre: 'VSCode', nivel: 5 },
-  { id: 4, icono: '/src/assets/icons/photoshop.svg', nombre: 'Photoshop', nivel: 5 },
-  { id: 5, icono: '/src/assets/icons/mysql.svg', nombre: 'Workbench', nivel: 4 },
+  { id: 1, icono: iconos['/src/assets/icons/git.svg'], nombre: 'Git', nivel: 4 },
+  { id: 2, icono: iconos['/src/assets/icons/docker.svg'], nombre: 'Docker', nivel: 5 },
+  { id: 3, icono: iconos['/src/assets/icons/vscode.svg'], nombre: 'VSCode', nivel: 5 },
+  { id: 4, icono: iconos['/src/assets/icons/photoshop.svg'], nombre: 'Photoshop', nivel: 5 },
+  { id: 5, icono: iconos['/src/assets/icons/mysql.svg'], nombre: 'Workbench', nivel: 4 },
 ];
 
 bdSkillsList.value = [
-  { id: 1, icono: '/src/assets/icons/mongodb.svg', nombre: 'MongoDB', nivel: 4 },
-  { id: 2, icono: '/src/assets/icons/mysql2.svg', nombre: 'MySQL', nivel: 4 },
-  { id: 3, icono: '/src/assets/icons/mssql.svg', nombre: 'MS SQL', nivel: 3 },
-  { id: 4, icono: '/src/assets/icons/postgresql.svg', nombre: 'PSQL', nivel: 5 },
-  { id: 5, icono: '/src/assets/icons/mariadb.svg', nombre: 'MariaDB', nivel: 4 },
+  { id: 1, icono: iconos['/src/assets/icons/mongodb.svg'], nombre: 'MongoDB', nivel: 4 },
+  { id: 2, icono: iconos['/src/assets/icons/mysql2.svg'], nombre: 'MySQL', nivel: 4 },
+  { id: 3, icono: iconos['/src/assets/icons/mssql.svg'], nombre: 'MS SQL', nivel: 3 },
+  { id: 4, icono: iconos['/src/assets/icons/postgresql.svg'], nombre: 'PSQL', nivel: 5 },
+  { id: 5, icono: iconos['/src/assets/icons/mariadb.svg'], nombre: 'MariaDB', nivel: 4 },
 ];
 
 idiomasSkillsList.value = [
-  { id: 1, icono: '/src/assets/icons/arg.svg', nombre: 'Español', nivel: 5 },
-  { id: 2, icono: '/src/assets/icons/eeuu.svg', nombre: 'Inglés', nivel: 3 },
+  { id: 1, icono: iconos['/src/assets/icons/arg.svg'], nombre: 'Español', nivel: 5 },
+  { id: 2, icono: iconos['/src/assets/icons/eeuu.svg'], nombre: 'Inglés', nivel: 3 },
 ];
 </script>
 
