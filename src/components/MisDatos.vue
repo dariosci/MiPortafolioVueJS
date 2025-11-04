@@ -38,10 +38,6 @@ const telefono = '+54 9 2622-660229';
   <section id="sobre-mi" class="sobremi">
     <div class="container">
       <div class="container categoria border-bottom">
-        <!--<div class="categoria_icono">
-          <i class="fa-sharp fa-solid fa-address-card"></i>
-          <h2 class="title">Sobre mí</h2>
-        </div>-->
       </div>
       <article class="container-sobremi" id="container-sobremi">
         <div class="tarjeta-sobremi">
@@ -91,15 +87,6 @@ const telefono = '+54 9 2622-660229';
   font-size: large;
   flex-direction: column;
 }
-
-/* .foto-img {
-  size: 5rem;
-  float: center;
-  border-radius: 50%;
-  object-position: center top;
-  border-color: #020202;
-  border-style: solid;
-} */
 
 /* Estilos generales para las tarjetas Sobre mi */
 .tarjeta-sobremi {

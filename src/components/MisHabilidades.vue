@@ -8,12 +8,12 @@ const bdSkillsList = ref([]);
 const idiomasSkillsList = ref([]);
 
 langSkillsList.value = [
-  { id: 1, icono: ['/src/assets/icons/python.svg'], nombre: 'Python', nivel: 4 },
-  { id: 2, icono: ['/src/assets/icons/js.svg'], nombre: 'JavaScript', nivel: 4 },
-  { id: 3, icono: ['/src/assets/icons/java.svg'], nombre: 'Java', nivel: 3 },
-  { id: 4, icono: ['/src/assets/icons/html.svg'], nombre: 'HTML', nivel: 5 },
-  { id: 5, icono: ['/src/assets/icons/css.svg'], nombre: 'CSS', nivel: 4 },
-  { id: 6, icono: ['/src/assets/icons/sql.svg'], nombre: 'SQL', nivel: 4 },
+  { id: 1, icono: iconos['/src/assets/icons/python.svg'], nombre: 'Python', nivel: 4 },
+  { id: 2, icono: iconos['/src/assets/icons/js.svg'], nombre: 'JavaScript', nivel: 4 },
+  { id: 3, icono: iconos['/src/assets/icons/java.svg'], nombre: 'Java', nivel: 3 },
+  { id: 4, icono: iconos['/src/assets/icons/html.svg'], nombre: 'HTML', nivel: 5 },
+  { id: 5, icono: iconos['/src/assets/icons/css.svg'], nombre: 'CSS', nivel: 4 },
+  { id: 6, icono: iconos['/src/assets/icons/sql.svg'], nombre: 'SQL', nivel: 4 },
 ];
 
 frameSkillsList.value = [
