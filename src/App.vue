@@ -38,7 +38,9 @@
 </template>
 
 <style scoped>
+
 section h2 {
   margin-top: 32px;
 }
+
 </style>

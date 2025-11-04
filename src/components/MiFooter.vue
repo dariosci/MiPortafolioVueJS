@@ -43,7 +43,9 @@ const scrollToTop = () => {
 
 <style scoped>
 .footer {
-  position: relative;
+  position:absolute;
+  left:-0.5%;
+
   text-align: center;
   color: #fafafa;
   background-color: rgb(94, 94, 94);
