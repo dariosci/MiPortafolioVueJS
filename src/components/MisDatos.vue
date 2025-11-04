@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import Typed from 'typed.js';
-const iconos = import.meta.glob('../assets/icons/*', { eager: true, import: 'default', query: '?url' });
+const iconos = import.meta.glob('/src/assets/icons/*', { eager: true, import: 'default', query: '?url' });
 
 onMounted(() => {
   new Typed('#typedMessage', {
