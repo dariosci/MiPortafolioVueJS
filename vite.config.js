@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true }),
   ],
+  base: 'https://dariosci.github.io/MiPortafolioVueJS',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
