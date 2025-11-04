@@ -56,14 +56,12 @@ experiencia.value = [
 .experiencia {
   display: flex;
   justify-content: center;
-  padding: 2rem;
   margin-top: 32px;
 }
 
 .container-experiencia {
   display: flex;
   width: 100%;
-  padding: 2rem;
   line-height: 2.5rem;
   font-size: large;
   flex-direction: column;

@@ -105,14 +105,12 @@ onMounted(() => {
 .estudios {
     display: flex;
     justify-content: center;
-    padding: 2rem;
     margin-bottom: 3rem;
 }
 
 .container-estudios {
     display: flex;
     width: 100%;
-    padding: 2rem;
     line-height: 2.5rem;
     font-size: large;
 }
@@ -151,7 +149,6 @@ section {
 
     .estudios {
         width: 100%;
-        padding: 1rem;
         margin-top: 1rem;
         font-size: small;
     }

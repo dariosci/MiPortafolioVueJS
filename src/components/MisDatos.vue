@@ -76,13 +76,12 @@ const telefono = '+54 9 2622-660229';
   display: flex;
   justify-content: center;
   /* esto centra el elemento */
-  padding: 2rem;
+
 }
 
 .container-sobremi {
   display: flex;
   width: 100%;
-  padding: 2rem;
   line-height: 2.5rem;
   font-size: large;
   flex-direction: column;
@@ -125,9 +124,10 @@ const telefono = '+54 9 2622-660229';
 }
 
 .foto-perfil img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 18rem;
   /* Asegura que la imagen no exceda el ancho de su contenedor */
-  max-height: 100%;
+  max-height: auto;
   /* Asegura que la imagen no exceda el alto de su contenedor */
   object-fit: contain;
   /* Ajusta la imagen dentro del contenedor sin recortar */
@@ -243,10 +243,10 @@ svg circle {
 @media (max-width: 767px) {
   .container-sobremi {
     width: 100%;
-    padding: 1;
+    padding: 1rem;
     margin-top: 1rem;
     /* margen a lo alto */
-    line-height: 2.5rem;
+    line-height: 2rem;
     /* espaciado entre los parrafos del texto */
     font-size: small;
     flex-direction: column;
@@ -257,11 +257,16 @@ svg circle {
     /* Apila el logo y el contenido en pantallas pequeñas */
     text-align: center;
     /* Centra el texto cuando está apilado */
+    padding: 1rem;
   }
 
   .foto-perfil {
     margin-bottom: 15px;
     /* Espacio debajo del logo cuando está apilado */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   .sobremi-contenido {
@@ -291,6 +296,9 @@ svg circle {
   .foto-perfil {
     margin-bottom: 15px;
     /* Espacio debajo del logo cuando está apilado */
+    width: 40%;
+    max-width: 250px;
+    margin: 0 auto 1rem;
   }
 
   .sobremi-contenido {

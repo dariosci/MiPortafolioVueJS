@@ -69,7 +69,6 @@ proyectosList.value = [
 .proyectos {
   display: flex;
   justify-content: center;
-  padding: 2rem;
   margin-top: 32px;
 }
 
