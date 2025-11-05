@@ -6,21 +6,21 @@ const images = import.meta.glob('../assets/images/*', { eager: true, import: 'de
 const proyectosList = ref([]);
 proyectosList.value = [
   { id: 0,
-    imagen: images['../assets/images/proyectos.jpg'],
+    imagen: images['../assets/images/proyecto-hosp.jpg'],
     titulo: 'Página Hospital',
     descripcion: 'Página del Hospital Grl. Las Heras bajo portal Joomla',
     githubLink: 'https://github.com/dariosci/',
     url: 'https://hosplasheras.mendoza.gov.ar/'
   },
   { id: 1,
-    imagen: images['../assets/images/proyectos.jpg'],
+    imagen: images['../assets/images/proyecto-android.jpg'],
     titulo: 'Proyecto Final Android',
     descripcion: 'Proyecto Final Integrador - Desarrollo de Aplicaciones Móviles - Argentina Programa 4.0',
     githubLink: 'https://github.com/dariosci/ProyectoFinalAndroid?tab=readme-ov-file#proyecto-final-integrador---desarrollo-de-aplicaciones-m%C3%B3viles---argentina-programa-40/',
     url: 'https://developer.android.com/studio?gad_source=1&gad_campaignid=21831783795&gbraid=0AAAAAC-IOZm5hEjrCTxjGnkQe-KeL9fkv&gclid=CjwKCAjwx8nCBhAwEiwA_z__0wXY7DSN1sbweDND7gpTR_mnN5N3ZmU1HgNDWfQWjv2yKIncPp4v8RoCngIQAvD_BwE&gclsrc=aw.ds&hl=es-419/'
   },
   { id: 2,
-    imagen: images['../assets/images/proyectos.jpg'],
+    imagen: images['../assets/images/proyecto-portafolio.jpg'],
     titulo: 'miPortafolio-web',
     descripcion: 'Mi primer portafolio-web creado para la materia Programación I',
     githubLink: 'https://github.com/dariosci/ProyectoFinalAndroid?tab=readme-ov-file#proyecto-final-integrador---desarrollo-de-aplicaciones-m%C3%B3viles---argentina-programa-40/',
