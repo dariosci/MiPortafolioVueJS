@@ -79,17 +79,11 @@ onMounted(() => {
           </p>
         </div>
 
-        <!-- Punto central (solo en escritorio) -->
+        <!-- Punto central con fecha dentro (escritorio) -->
         <div
-          class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 border-white shadow-md flex items-center justify-center hidden md:flex"
-          :style="{ backgroundColor: item.color }"></div>
-
-        <!-- Fecha normal en escritorio -->
-        <div class="hidden md:block text-center mb-2"
-          :class="index % 2 === 0 ? 'md:text-right md:pr-10' : 'md:text-left md:pl-10'">
-          <span class="font-bold text-lg tracking-wide" :style="{ color: item.color }">
-            {{ item.fecha }}
-          </span>
+          class="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white shadow-md flex items-center justify-center text-white font-bold text-lg hidden md:flex"
+          :style="{ backgroundColor: item.color }">
+          {{ item.fecha }}
         </div>
       </div>
     </div>
@@ -228,7 +222,10 @@ section {
   .estudios {
     width: 100%;
   }
-
+  #estudios .w-14.h-14 {
+    font-size: 0.9rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
   #tabla-cursos th:nth-child(2),
   #tabla-cursos th:nth-child(3),
   #tabla-cursos td:nth-child(2),
@@ -252,7 +249,10 @@ section {
   .estudios {
     width: 100%;
   }
-
+  #estudios .w-14.h-14 {
+    font-size: 0.9rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
   .container-estudios-section {
     display: flex;
     align-items: center;
